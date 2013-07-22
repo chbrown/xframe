@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Github Frameset</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+</style>
+
+<div id="container">
+  <iframe src="" class="top-left"></iframe>
+  <iframe src="" class="bottom-left"></iframe>
+  <iframe src="" class="right"></iframe>
+</div>
+
+<script src="static/lib/jquery.min.js"></script>
+<script src="static/lib/underscore.min.js"></script>
+
+<script>
+// poll...
+// console.log('search', window.location.search);
+var querystring = {};
+window.location.search.match(/[^?&=]+=[^?&=]+/g).forEach(function(pair) {
+  var m = pair.match(/(.+)=(.+)/);
+  querystring[m[1]] = m[2];
+});
+
+function setup() {
+  var url = 'https://github.com/' + querystring.user + '/' + querystring.repo;
+
+  // $('.top-left').attr('src', url + '/graphs/contributors');
+  $('.bottom-left').attr('src', url + '/graphs/commit-activity');
+  $('.right').attr('src', url + '/graphs/punch-card');
+  $('.top-left').load(url + '/graphs/contributors');
+}
+$(setup);
+</script>
+
+<!--
+  example:
+  http://ghkl/frameset/github.html?user=chbrown&repo=amulet
+-->

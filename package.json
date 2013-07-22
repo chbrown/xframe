@@ -1,0 +1,43 @@
+{
+  "name": "xframe",
+  "version": "0.0.1",
+  "description": "Antiframe proxying",
+  "author": "Christopher Brown <io@henrian.com> (http://henrian.com)",
+  "license": "MIT",
+  "keywords": [
+    "frames",
+    "tunnel",
+    "cors",
+    "cross",
+    "origin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chbrown/xframe.git"
+  },
+  "bin": {
+    "committers-cli": "cli.js"
+  },
+  "dependencies": {
+    "async": "*",
+    "cookies": "git://github.com/chbrown/cookies.git",
+    "eyes": "*",
+    "http-enhanced": "*",
+    "optimist": "*",
+    "redis": "*",
+    "hiredis": "*",
+    "regex-router": "*",
+    "request": "*",
+    "underscore": "*",
+    "winston": "*"
+  },
+  "staticPattern": "static/lib/{file}",
+  "staticDependencies": {
+    "backbone": "*",
+    "handlebars": "*",
+    "jquery": "*",
+    "json2": "*",
+    "misc-js": "git://github.com/chbrown/misc-js.git",
+    "underscore": "*"
+  }
+}
