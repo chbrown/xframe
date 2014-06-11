@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-'use strict'; /*jslint es5: true, node: true, indent: 2 */
+/*jslint node: true */
 var path = require('path');
 var request = require('request');
 var http = require('http-enhanced');
 // var Cookies = require('cookies');
-var logger = require('winston');
+var logger = require('loge');
 var argv = require('optimist').default({port: 1451, hostname: '127.0.0.1'}).argv;
 var Router = require('regex-router');
 var R = new Router();
@@ -17,9 +17,11 @@ var R = new Router();
 // };
 
 R.get(/^\/favicon.ico/, function(m, req, res) { res.die(404, 'dammit chrome'); });
+
 R.post(/^\/$/, function(m, res, req) {
 
 });
+
 R.get(/^\/(\w+)/, function(m, res, req) {
 
 });

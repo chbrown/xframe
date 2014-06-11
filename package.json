@@ -22,21 +22,20 @@
     "async": "*",
     "cookies": "git://github.com/chbrown/cookies.git",
     "eyes": "*",
+    "hiredis": "*",
     "http-enhanced": "*",
+    "loge": "*",
     "optimist": "*",
     "redis": "*",
-    "hiredis": "*",
     "regex-router": "*",
     "request": "*",
-    "underscore": "*",
-    "winston": "*"
+    "underscore": "*"
   },
   "staticPattern": "static/lib/{file}",
   "staticDependencies": {
     "backbone": "*",
     "handlebars": "*",
     "jquery": "*",
-    "json2": "*",
     "misc-js": "git://github.com/chbrown/misc-js.git",
     "underscore": "*"
   }
